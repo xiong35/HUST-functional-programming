@@ -21,7 +21,7 @@ fun fib n =
         if n<=2 then 1
         else fib(n-1) + fib(n-2);
 
-(* 这里改成 0 似乎合理一些? 从 1 开始计数, 和 fib 函数保持统一 *)
+(* 这里改成 1 似乎合理一些? 从 1 开始计数, 和 fib 函数保持统一 *)
 fun fibber (1: int) : int * int = (1, 1)
     | fibber (n: int) : int * int =
         let val (x: int, y: int) = fibber (n-1)
